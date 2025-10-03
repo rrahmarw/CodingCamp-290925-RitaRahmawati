@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </label>
+    </div>
+    
+    <div class="container">
+        <h1>To-Do List Dashboard</h1>
+
+        <div class="stats">
+            <div class="stat">
+                <h3 id="total-tasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat">
+                <h3 id="completed-tasks">0</h3>
+                <p>Completed</p>
+            </div>
+            <div class="stat">
+                <h3 id="pending-tasks">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat">
+                <h3 id="progress">0%</h3>
+                <p>Progress</p>
+            </div>
+        </div>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a todo...">
+            <input type="date" id="date-input">
+            <button type="submit">+</button>
+        </form>
+
+        <div class="actions">
+            <input type="text" id="filter-input" placeholder="Search tasks...">
+            <button id="delete-all" class="delete-all">Delete All</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todo-list">
+                <tr><td colspan="4" class="empty">No tasks found</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>

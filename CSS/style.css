@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.stat h3 {
+    margin: 0;
+    color: #ff6600;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-form input, #todo-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#todo-form button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#todo-form button:hover {
+    background: #e65c00;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.actions input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.delete-all {
+    background: crimson;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-all:hover {
+    background: darkred;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.complete-btn {
+    background: #28a745;
+    color: #fff;
+}
+
+.complete-btn:hover {
+    background: #218838;
+}
+
+.delete-btn {
+    background: crimson;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;  /* tetap di kanan */
+    margin: 20px 40px 20px 0;   /* atas 20px, kanan 40px, bawah 20px, kiri 0 */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.switch .sun, .switch .moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.switch .sun {
+    left: 8px;
+    color: #ffcc00;
+}
+
+.switch .moon {
+    right: 8px;
+    color: #fff;
+    opacity: 0;
+}
+
+#theme-switch {
+    display: none;
+}
+
+#theme-switch:checked + .switch {
+    background: #333;
+}
+
+#theme-switch:checked + .switch .sun {
+    opacity: 0;
+}
+
+#theme-switch:checked + .switch .moon {
+    opacity: 1;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark .container {
+    background: #2c2c2c;
+    color: #eee;
+}
+
+body.dark table, 
+body.dark th, 
+body.dark td {
+    border-color: #555;
+}
+
+body.dark .stat {
+    background: #3a3a3a;
+}
+
+.stat {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.stat h3 {
+    margin: 0;
+    color: #ff6600;
+}
+
+/* Efek zoom pas hover */
+.stat:hover {
+    transform: scale(1.08); /* zoom 8% */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
